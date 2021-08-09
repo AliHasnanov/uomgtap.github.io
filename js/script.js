@@ -37,10 +37,11 @@ $(function(){
         var kredit5 = $('.kredit-5').val()
         var fenn6 = $('.fenn-6').val()
         var kredit6 = $('.kredit-6').val()
-        
         if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4=="" || fenn5=="" || kredit5=="" || fenn6=="" || kredit6==""){
-            $(".container").css("filter","blur(5px)")
-            $(".social-media").css("filter",'blur(5px)')
+            $(".container").css("filter","blur(7px)")
+            $(".social-media").css("filter",'blur(7px)')
+            $(".container").css("pointer-events","none")
+            $(".alert-message").css("pointer-events","none")
             $(".alert").slideDown(300)
         }
         else{
@@ -49,9 +50,11 @@ $(function(){
             var ortalama=balcemi/kreditcem
             $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
         }
-        $(".alert").on("click",function(){
+        $(".alert-button").on("click",function(){
             $(".container").css("filter","blur(0px)")
             $(".social-media").css("filter",'blur(0px)')
+            $(".container").css("pointer-events","auto")
+            $(".social-media").css("pointer-events","auto")
             $(".alert").slideUp(300)
         })
        }
@@ -66,10 +69,11 @@ $(function(){
         var kredit4 = $('.kredit-4').val()
         var fenn5 = $('.fenn-5').val()
         var kredit5 = $('.kredit-5').val()
-        
         if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4=="" || fenn5=="" || kredit5==""){
-            $(".container").css("filter","blur(5px)")
-            $(".social-media").css("filter",'blur(5px)')
+            $(".container").css("filter","blur(7px)")
+            $(".social-media").css("filter",'blur(7px)')
+            $(".container").css("pointer-events","none")
+            $(".alert-message").css("pointer-events","none")
             $(".alert").slideDown(300)
         }
         else{
@@ -78,9 +82,11 @@ $(function(){
             var ortalama=balcemi/kreditcem
             $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
         }
-        $(".alert").on("click",function(){
+        $(".alert-button").on("click",function(){
             $(".container").css("filter","blur(0px)")
             $(".social-media").css("filter",'blur(0px)')
+            $(".container").css("pointer-events","auto")
+            $(".social-media").css("pointer-events","auto")
             $(".alert").slideUp(300)
         })
         }
@@ -94,18 +100,23 @@ $(function(){
         var fenn4 = $('.fenn-4').val()
         var kredit4 = $('.kredit-4').val()
         if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4==""){
-            $(".container").css("filter","blur(5px)")
-            $(".social-media").css("filter",'blur(5px)')
+            $(".container").css("filter","blur(7px)")
+            $(".social-media").css("filter",'blur(7px)')
+            $(".container").css("pointer-events","none")
+            $(".alert-message").css("pointer-events","none")
             $(".alert").slideDown(300)
         }
         else{
             var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)
             var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4)
             var ortalama=balcemi/kreditcem
-            $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")}
-            $(".alert").on("click",function(){
+            $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        }
+            $(".alert-button").on("click",function(){
                 $(".container").css("filter","blur(0px)")
                 $(".social-media").css("filter",'blur(0px)')
+                $(".container").css("pointer-events","auto")
+                $(".social-media").css("pointer-events","auto")
                 $(".alert").slideUp(300)
             })
         }
