@@ -37,10 +37,23 @@ $(function(){
         var kredit5 = $('.kredit-5').val()
         var fenn6 = $('.fenn-6').val()
         var kredit6 = $('.kredit-6').val()
-        var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)+parseInt(kredit5)+parseInt(kredit6)
-        var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4+ fenn5*kredit5+ fenn6*kredit6)
-        var ortalama=balcemi/kreditcem
-        $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        
+        if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4=="" || fenn5=="" || kredit5=="" || fenn6=="" || kredit6==""){
+            $(".container").css("filter","blur(5px)")
+            $(".social-media").css("filter",'blur(5px)')
+            $(".alert").slideDown(300)
+        }
+        else{
+            var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)+parseInt(kredit5)+parseInt(kredit6)
+            var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4+ fenn5*kredit5+ fenn6*kredit6)
+            var ortalama=balcemi/kreditcem
+            $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        }
+        $(".alert").on("click",function(){
+            $(".container").css("filter","blur(0px)")
+            $(".social-media").css("filter",'blur(0px)')
+            $(".alert").slideUp(300)
+        })
        }
         else if(result==5){
         var fenn1 = $('.fenn-1').val()
@@ -53,10 +66,23 @@ $(function(){
         var kredit4 = $('.kredit-4').val()
         var fenn5 = $('.fenn-5').val()
         var kredit5 = $('.kredit-5').val()
-        var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)+parseInt(kredit5)
-        var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4+ fenn5*kredit5)
-        var ortalama=balcemi/kreditcem
-        $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        
+        if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4=="" || fenn5=="" || kredit5==""){
+            $(".container").css("filter","blur(5px)")
+            $(".social-media").css("filter",'blur(5px)')
+            $(".alert").slideDown(300)
+        }
+        else{
+            var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)+parseInt(kredit5)
+            var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4+ fenn5*kredit5)
+            var ortalama=balcemi/kreditcem
+            $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        }
+        $(".alert").on("click",function(){
+            $(".container").css("filter","blur(0px)")
+            $(".social-media").css("filter",'blur(0px)')
+            $(".alert").slideUp(300)
+        })
         }
         else if(result==4){
         var fenn1 = $('.fenn-1').val()
@@ -67,10 +93,21 @@ $(function(){
         var kredit3 = $('.kredit-3').val()
         var fenn4 = $('.fenn-4').val()
         var kredit4 = $('.kredit-4').val()
-        var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)
-        var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4)
-        var ortalama=balcemi/kreditcem
-        $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")
+        if(fenn1=="" || kredit1=="" || fenn2=="" || kredit2=="" || fenn3=="" || kredit3=="" || fenn4=="" || kredit4==""){
+            $(".container").css("filter","blur(5px)")
+            $(".social-media").css("filter",'blur(5px)')
+            $(".alert").slideDown(300)
+        }
+        else{
+            var kreditcem =   parseInt(kredit1)+ parseInt(kredit2)+parseInt(kredit3)+parseInt(kredit4)
+            var balcemi = (fenn1*kredit1 + fenn2*kredit2+ fenn3*kredit3+ fenn4*kredit4)
+            var ortalama=balcemi/kreditcem
+            $(".result").text("Nəticəniz: " + ortalama.toFixed(2) + " Bal")}
+            $(".alert").on("click",function(){
+                $(".container").css("filter","blur(0px)")
+                $(".social-media").css("filter",'blur(0px)')
+                $(".alert").slideUp(300)
+            })
         }
     })
     })
