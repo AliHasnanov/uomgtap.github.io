@@ -7,7 +7,6 @@ body {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
 }
 .alert {
-  background-color: white;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -78,10 +77,14 @@ body {
   font-size: 24px;
   color: white;
 }
-.menu .menu-container .icon1 {
+.menu .menu-container .icon {
   width: 15px;
   height: 15px;
-  transform: rotate(90deg);
+  transition: 0.4s;
+}
+.icon-toggle {
+  transform: rotate(-180deg);
+  transition: 0.4;
 }
 .select-menu {
   background-color: #003049;
@@ -192,9 +195,6 @@ input[type="number"] {
 }
 .select-menu .option:hover {
   opacity: 1;
-}
-.footer-container .hesabla:hover {
-  transition: 0.3s;
 }
 .menu:hover {
   opacity: 0.9;
