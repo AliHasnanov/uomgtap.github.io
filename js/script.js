@@ -1,6 +1,7 @@
 $(function(){
     $('.menu').click(function(){
         $(".select-menu").slideToggle(300)
+        $(".icon").toggleClass("icon-toggle")
     })
     let result=6
     $("input[type='radio']").click(function(){
