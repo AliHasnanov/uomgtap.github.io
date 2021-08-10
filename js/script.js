@@ -5,6 +5,7 @@ $(function(){
     })
     let result=6
     $("input[type='radio']").click(function(){
+        $(".icon").removeClass("icon-toggle")
         result = $(this).val();
         $(".select-menu").slideUp(300)
         if(result==4){
