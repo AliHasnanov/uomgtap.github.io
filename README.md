@@ -1,1 +1,1 @@
-Ortalama bal hesablanmasi ucun app Created by Khasanoff
+Bu application ilə üomg balınızı rahat bir şəkildə hesablaya bilərsiniz :)
